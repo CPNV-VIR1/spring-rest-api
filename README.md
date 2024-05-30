@@ -1,38 +1,45 @@
-# Exam
+# Spring - REST API
 
-This repository has been created to assess students' skills on Spring.
+This repository is an example of an api rest spring application.
 
 ## First build
 
-After cloning this repository, run this command:
+Note : To find out which version of jdk to install in your project, check the pom.xlm file!
 
+* After cloning this repository, to retrieve the dependencies, compile and run the program for the first time, Run this command:
+
+[INPUT]
 ```
    mvn clean spring-boot:run
 ```
 
-to retrieve the dependencies, compile and run the program for the first time.
-
+[OUTPUT]
 ```
   [...]
-  2024-04-09T21:27:27.338+02:00  INFO 21340 --- [payroll] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-  2024-04-09T21:27:27.517+02:00  WARN 21340 --- [payroll] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be per
-  formed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-  2024-04-09T21:27:27.752+02:00  INFO 21340 --- [payroll] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-  2024-04-09T21:27:27.760+02:00  INFO 21340 --- [payroll] [           main] ch.etmles.payroll.PayrollApplication     : Started PayrollApplication in 2.972 seconds (process running for 3.247)
-  2024-04-09T21:27:27.802+02:00  INFO 21340 --- [payroll] [           main] c.e.payroll.Repositories.LoadDatabase    : Preloading Employee{id=1, name='Bilbo Baggins', role='burglar'}
-  2024-04-09T21:27:27.803+02:00  INFO 21340 --- [payroll] [           main] c.e.payroll.Repositories.LoadDatabase    : Preloading Employee{id=2, name='Frodo Baggins', role='thief'}
+    2024-05-30T08:42:27.632+02:00  INFO 1088 --- [payroll] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+    2024-05-30T08:42:27.640+02:00  INFO 1088 --- [payroll] [           main] ch.cpnves.payroll.PayrollApplication     : Started PayrollApplication in 2.839 seconds (process running for 3.086)
+    2024-05-30T08:42:27.684+02:00  INFO 1088 --- [payroll] [           main] c.c.payroll.Repositories.LoadDatabase    : Preloading Employee{id=1, name='Bilbo Baggins', role='burglar'}
+    2024-05-30T08:42:27.685+02:00  INFO 1088 --- [payroll] [           main] c.c.payroll.Repositories.LoadDatabase    : Preloading Employee{id=2, name='Frodo Baggins', role='thief'}
   [...]
 ```
 
 ## Test using http requests
 
-Got the file [project]\src\main\java\ch\etmles\payroll\Controllers\EmployeeController.java
+Got the file [project]\src\main\java\ch\cpnves\payroll\Controllers\EmployeeController.java
 
 Before all routes methods, you will find a curl sample.
 
-## Backlog
+[INPUT]
+```
+curl -i localhost:8080/employees     
+````
 
-Read the different issues.
+[OUTPUT]
+```
+HTTP/1.1 200 
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 30 May 2024 06:45:57 GMT
 
-[Issues](https://github.com/ETML-ES-FWBE/exam/issues)
-
+[{"id":1,"name":"Bilbo Baggins","role":"burglar"},{"id":2,"name":"Frodo Baggins","role":"thief"}]
+```

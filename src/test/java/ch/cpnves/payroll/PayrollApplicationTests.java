@@ -1,4 +1,4 @@
-package ch.etmles.payroll;
+package ch.cpnves.payroll;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

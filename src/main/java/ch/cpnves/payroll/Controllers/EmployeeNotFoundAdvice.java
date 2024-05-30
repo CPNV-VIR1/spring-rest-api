@@ -1,4 +1,4 @@
-package ch.etmles.payroll.Controllers;
+package ch.cpnves.payroll.Controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

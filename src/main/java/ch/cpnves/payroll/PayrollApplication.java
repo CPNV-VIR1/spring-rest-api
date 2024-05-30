@@ -1,4 +1,4 @@
-package ch.etmles.payroll;
+package ch.cpnves.payroll;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

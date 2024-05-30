@@ -1,6 +1,6 @@
-package ch.etmles.payroll.Repositories;
+package ch.cpnves.payroll.Repositories;
 
-import ch.etmles.payroll.Entities.Employee;
+import ch.cpnves.payroll.Entities.Employee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
